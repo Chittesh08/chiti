@@ -1,8 +1,15 @@
-class Even {
-   public static void main(String args[]) {
-    int num = 100;
-    System.out.print("Odd Numbers from 1 to "+num+" are: ");
-    for (int i = 1; i <= num; i++) {
-       if (i % 2 != 0) {
-        System.out.print(i + " ");
-       }
+public class Even {
+    public static void main(String[] args) {
+        String input = "madam"; 
+        if (isPalindrome(input)) {
+            System.out.println("\"" + input + "\" is a palindrome.");
+        } else {
+            System.out.println("\"" + input + "\" is not a palindrome.");
+        }
+    }
+
+    public static boolean isPalindrome(String str) {
+        String reversed = new StringBuilder(str).reverse().toString();
+        return str.equals(reversed);
+    }
+}
